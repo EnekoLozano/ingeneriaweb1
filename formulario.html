@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>NEXUS STUDIOS formulario</title>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="entrega1.css">
+    </head>
+    <body>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html" aria-current="page">Formulario</a></li>
+                <li><a href="informacionextra.html">Información extra</a></li>
+                <li><a href="preguntasfrecuentes.html">Preguntas frecuentes</a></li>
+            </ul>
+        </nav>
+        <h1>NEXUS STUDIOS</h1>
+        <h2>Rellena el siguiente formulario, sin presion</h2>
+        
+        <form action="server.php" method="post">
+            <fieldset>
+                <legend>Datos del cliente / usuario</legend>
+
+                <label for="nombre">Nombre completo: </label>
+                <input type="text" id="nombre" name="nombre">
+                
+                <p>¿Eres cliente registrado/a?</p>
+                <input type="radio" id="cliente-S" name="cliente" value="S">
+                <label for="cliente-S">Sí, ya soy cliente</label>
+
+                <input type="radio" id="cliente-N" name="cliente" value="N">
+                <label for="cliente-N">No soy cliente</label>
+                <br><br>
+                
+                <label>  Email corporativo: </label>
+                <input>
+                <br><br>
+                
+                <label>Contraseña de acceso: </label>
+                <input>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos del proyecto</legend>
+
+                <label>Tipo de proyecto: </label>
+                <select>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="desarrollo-web">Desarrollo Web</option>
+                    <option value="app-movil">Aplicación Móvil</option>
+                    <option value="diseno-ui-ux">Diseño UI/UX</option>
+                    <option value="consultoria">Consultoría de Software</option>
+                </select>
+                <br><br>
+
+                <label for="id-presupuesto">Presupuesto estimado: </label>
+                <select id="id-presupuesto" name="presupuesto">
+                    <option value="bajo">Menos de 3.000 €</option>
+                    <option value="medio" selected>Entre 3.000 € y 10.000 €</option>
+                    <option value="alto">Más de 10.000 €</option>
+                </select>
+
+                <p>Selecciona las fechas estimadas del proyecto:</p>
+                <label>Fecha de inicio: </label>
+                <input type="date">
+                <br><br>
+                <label>Fecha límite / Entrega: </label>
+                <input type="date">
+                <br><br>
+
+                <label>Descripción y objetivos del proyecto:</label><br>
+                <textarea placeholder="..."></textarea>
+            </fieldset>
+            
+            <br>
+            <input type="checkbox">
+            <label>Acepto los términos del servicio y la política de privacidad</label>
+            <br><br>
+
+            <p>
+				<a href="index.html"> Enviar </a>
+			</p>
+        </form>
+    </body>
+</html>
